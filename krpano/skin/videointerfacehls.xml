@@ -556,7 +556,7 @@
 	<!-- videointerface_update_videoinfo(forceupdate) -->
 	<action name="videointerface_update_videoinfo">
 		copy(vp, plugin[get(videointerface_video)]);
-		if(vp AND vp.loaded,
+		if(vp AND vp.loaded AND vp.isvideoready AND vp.isseeking == false,
             if(vp.totaltime > 10.0,
                 vp.play();
             );
