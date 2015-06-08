@@ -20,7 +20,7 @@
             onvideoplay=""
             onvideopaused=""
             onvideocomplete="loadpano('%SWFPATH%/v2.xml', NULL, KEEPVIEW | KEEPDISPLAY | KEEPPROGRESS |  KEEPCONTROL);"
-            onloaded=""
+            onloaded="trace('1.mp4');"
             />
 
 
