@@ -1,6 +1,6 @@
 <krpano>
 
-    <include url="skin/videointerfacehls.xml" />
+<!--    <include url="skin/videointerfacehls.xml" />-->
     <plugin name="video"
             url.flash="plugins/videoplayer.swf"
             url.html5="plugins/videoplayer.js"
@@ -16,11 +16,11 @@
             ox="0" oy="0"
             width.no-panovideosupport="100%"
             height.no-panovideosupport="prop"
-            onvideoready="videointerface_videoready();"
+            onvideoready=""
             onvideoplay=""
             onvideopaused=""
-            onvideocomplete="loadpano('%SWFPATH%/v5.xml', NULL, KEEPVIEW | KEEPDISPLAY | KEEPCONTROL);"
-            onloaded="videointerface_setup_interface(video);"
+            onvideocomplete="loadpano('%SWFPATH%/v5.xml', NULL, KEEPVIEW | KEEPDISPLAY | KEEPPROGRESS | KEEPCONTROL);"
+            onloaded=""
             />
 
 
