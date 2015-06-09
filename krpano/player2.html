@@ -28,11 +28,11 @@
             krpano.call("set(plugin[video].s_next,'"+s_next+"')");
         }
         setInterval(function() {
-                    getNextChunk();
+                    getNextChunk(false);
                 }, 10000
         );
         // получает из плейлиста 2 последних чанки
-        function getNextChunk(d = false) {
+        function getNextChunk(d) {
             $.ajax({
                 url: '/krpano2/m3u8/1_hq.m3u8',
                 success: function(data) {
