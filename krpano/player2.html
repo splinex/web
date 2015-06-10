@@ -41,6 +41,7 @@
                     var next = a[a.length-1];
                     next = next.replace('ts', 'mp4');
                     s_next = '%SWFPATH%/m3u8/'+next;
+                    var krpano=document.getElementById ("krpanoSWFObject");
                     krpano.call("set(plugin[video].s_next,'"+s_next+"')");
                     // если первый запуск то krpano
                     if(d)
