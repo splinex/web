@@ -29,7 +29,7 @@
         }
         setInterval(function() {
                     getNextChunk(false);
-                }, 30000
+                }, 20000
         );
         // получает из плейлиста 2 последних чанки
         function getNextChunk(d) {
@@ -41,6 +41,7 @@
                     var next = a[a.length-1];
                     next = next.replace('ts', 'mp4');
                     s_next = '%SWFPATH%/m3u8/'+next;
+                    krpano.call("set(plugin[video].s_next,'"+s_next+"')");
                     // если первый запуск то krpano
                     if(d)
                         embedpano({swf:"player.swf", xml:"%SWFPATH%/2.xml", target:"pano", html5:"prefer", passQueryParameters:true, onready:krpanoReady});
