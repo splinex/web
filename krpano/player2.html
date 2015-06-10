@@ -34,7 +34,7 @@
         // получает из плейлиста 2 последних чанки
         function getNextChunk(d) {
             $.ajax({
-                url: '/krpano2/m3u8/1_hq.m3u8',
+                url: '/m3u8/1_hq.m3u8',
                 success: function(data) {
                     var reg = /([0-9]+)\.ts/g
                     var a = data.match(reg);
