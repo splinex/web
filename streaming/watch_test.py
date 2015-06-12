@@ -6,6 +6,7 @@ from os.path import basename
 from os.path import dirname
 from os.path import  splitext
 
+
 timeout = 1
 playlist_filename = "m3u8/1_hq.m3u8"
 dir_path = dirname(playlist_filename)
