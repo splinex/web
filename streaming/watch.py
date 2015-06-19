@@ -26,11 +26,11 @@ def tsToMp4(inputfile, dir_path, override=True):
               + " -c:v nvenc -preset:v hp -vf scale=iw/4:ih/4 " + out_path_lq
     call(callstr, shell=True)
     
-    if not exists(out_path_mq_mp4) :
+    if not exists(out_path_mq_mp4) or override == True:
         callstr = "ffmpeg -loglevel quiet -y -i " + out_path_mq  + " -c:v copy " + out_path_mq_mp4  
         call(callstr, shell=True)
     
-    if not exists(out_path_lq_mp4) :
+    if not exists(out_path_lq_mp4) or override == True:
         callstr = "ffmpeg -loglevel quiet -y -i " + out_path_lq  + " -c:v copy " + out_path_lq_mp4  
         call(callstr, shell=True)
     
@@ -40,7 +40,7 @@ def parsePlaylist( playlist ):
         for line in f:
             line = line.rstrip()
             if line.endswith('.ts'):
-                tsToMp4(line, dir_path, False)
+                tsToMp4(line, dir_path, True)
     f.close()
     
 def makeScreenshot(input_path):
