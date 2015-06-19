@@ -6,20 +6,33 @@ import subprocess
 from subprocess import call
 from os.path import basename
 from os.path import dirname
+from os.path import exists
 from os.path import splitext
 
-def tsToMp4(inputfile, dir_path):
+def tsToMp4(inputfile, dir_path, override=True):
     print ("process " + inputfile)
     file_name = splitext(inputfile)[0]
     input_path = os.path.join(dir_path, inputfile)
     out_path_mp4 = os.path.join(dir_path, file_name + ".mp4")
-    out_path_mq = os.path.join(dir_path, os.path.join("mq", file_name + ".ts"))
-    out_path_lq = os.path.join(dir_path, os.path.join("lq", file_name + ".ts"))
-    callstr = "ffmpeg -y -i " + input_path  \
+    out_path_mq = os.path.join(dir_path, os.path.join("../mq", file_name + ".ts"))
+    out_path_mq_mp4 = os.path.join(dir_path, os.path.join("../mq", file_name + ".mp4"))
+    out_path_lq = os.path.join(dir_path, os.path.join("../lq", file_name + ".ts"))
+    out_path_lq_mp4 = os.path.join(dir_path, os.path.join("../lq", file_name + ".mp4"))
+    if(exists(out_path_mp4) and exists(out_path_mq) and exists(out_path_lq) and override == False):
+        return
+    callstr = "ffmpeg -loglevel quiet -y -i " + input_path  \
               + " -c:v copy " + out_path_mp4       \
               + " -c:v nvenc -preset:v hp -vf scale=iw/2:ih/2 " + out_path_mq    \
               + " -c:v nvenc -preset:v hp -vf scale=iw/4:ih/4 " + out_path_lq
     call(callstr, shell=True)
+    
+    if not exists(out_path_mq_mp4) :
+        callstr = "ffmpeg -loglevel quiet -y -i " + out_path_mq  + " -c:v copy " + out_path_mq_mp4  
+        call(callstr, shell=True)
+    
+    if not exists(out_path_lq_mp4) :
+        callstr = "ffmpeg -loglevel quiet -y -i " + out_path_lq  + " -c:v copy " + out_path_lq_mp4  
+        call(callstr, shell=True)
     
 def parsePlaylist( playlist ):  
     dir_path = dirname(playlist)
@@ -27,26 +40,34 @@ def parsePlaylist( playlist ):
         for line in f:
             line = line.rstrip()
             if line.endswith('.ts'):
-                tsToMp4(line, dir_path)
+                tsToMp4(line, dir_path, False)
     f.close()
+    
+def makeScreenshot(input_path):
+    callstr = "ffmpeg -y -i " + input_path  \
+              + " -ss 0 -vframes 1 -vcodec mjpeg -f image2 -loglevel quiet " + input_path + ".jpg"
+    call(callstr, shell=True)
 
 def start_watch(playlist_filename):
-    timeout = 1    
+    updateScreenshotInterval = 10
+    timeout = 1   
     last_modified = 0 
+    last_time = 0
     currentFileId = -1
-    chunk_extenstions = ['ts'] ;
+    chunk_extenstions = ['ts']
+    mtime = {}
 
     dir_path = dirname(playlist_filename)
-    before = [fn for fn in os.listdir(dir_path) if any([fn.endswith(ext) for ext in chunk_extenstions])];
-    mtime = {}
+    playlist_basename = basename(playlist_filename)
     
-    lq_dir_path = os.path.join(dir_path,"lq")
-    mq_dir_path = os.path.join(dir_path,"mq")
-    call(["mkdir ",lq_dir_path])
-    call(["mkdir ",mq_dir_path])
+    lq_dir_path = os.path.join(dir_path,"../lq")
+    mq_dir_path = os.path.join(dir_path,"../mq")
+    call(["mkdir",lq_dir_path])
+    call(["mkdir",mq_dir_path])
 
     parsePlaylist(playlist_filename)
 
+    before = [fn for fn in os.listdir(dir_path) if any([fn.endswith(ext) for ext in chunk_extenstions])];
     for f in before:
         fpath = os.path.join(dir_path,f)
         mtime[f]=os.stat(fpath).st_mtime  
@@ -78,6 +99,14 @@ def start_watch(playlist_filename):
             
       call(["cp" , playlist_filename, lq_dir_path])
       call(["cp" , playlist_filename, mq_dir_path])
+      
+      current_time = time.time()
+      if current_time - last_time > updateScreenshotInterval:
+        print("makeScreenshot: " + str(current_time))
+        makeScreenshot(playlist_filename)
+        makeScreenshot(lq_dir_path + "/" + playlist_basename)
+        makeScreenshot(mq_dir_path + "/" + playlist_basename)
+        last_time = current_time
 
       before = after
   
@@ -85,19 +114,25 @@ def start_watch(playlist_filename):
 def main(argv):
    inputfile = ''
    outputfile = ''
+   help='watch.py -i <playlist_file>'
    try:
       opts, args = getopt.getopt(argv,"hi:",["ifile="])
    except getopt.GetoptError:
-      print 'watch.py -i <playlist_file>'
+      print (help)
       sys.exit(2)
    for opt, arg in opts:
       if opt == '-h':
-         print 'watch.py -i <playlist_file>'
+         print (help)
          sys.exit()
       elif opt in ("-i", "--ifile"):
          inputfile = arg
          
-   start_watch(inputfile)      
+   if(inputfile==''):
+      print (help)    
+      sys.exit(2)
+      
+   start_watch(inputfile)   
+           
          
 if __name__ == "__main__":
    main(sys.argv[1:]) 
