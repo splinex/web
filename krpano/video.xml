@@ -1,0 +1,50 @@
+<krpano version="1.18" bgcolor="0x000000">
+
+	<!-- the videoplayer interface skin -->
+	<include url="skin/videointerface.xml" />
+
+	<!-- include the videoplayer plugin and load the video (use a low res video for iOS) -->
+	<plugin name="video"
+            url.flash="plugins/videoplayer.swf"
+            url.html5="plugins/videoplayer.js"
+            
+            posterurl.no-ios.and.no-desktop="%SWFPATH%/m3u8/lq/1.m3u8.jpg"
+            videourl.no-ios.and.no-desktop="%SWFPATH%/m3u8/lq/1.mp4"
+            
+            posterurl.desktop="%SWFPATH%/m3u8/lq/1.m3u8.jpg"
+            videourl.desktop="%SWFPATH%/m3u8/lq/1.mp4"
+            
+            posterurl.ios="%SWFPATH%/m3u8/lq/1.m3u8.jpg"
+            videourl.ios="%SWFPATH%/m3u8/mq/1.m3u8"
+            
+            buffertime="0.1"
+	        pausedonstart="false"
+	        loop="false"
+	        enabled="false"
+	        zorder="0"
+	        align="center" ox="0" oy="0"
+
+	        width.no-panovideosupport="100%"
+	        height.no-panovideosupport="prop"
+
+            onloaded="videointerface_setup_interface(get(name));"
+            onvideocomplete="loadnextvideo();"
+	        onvideoready="videointerface_videoready();"
+	        />
+
+    <action name="loadnextvideo">
+        trace(get(plugin[video].s_next));
+        playvideo(get(s_next));
+    </action>
+
+
+	<!-- the panoramic video image -->
+	<image devices="panovideosupport">
+		<sphere url="plugin:video" />
+	</image>
+
+
+	<!-- set the default view - a light fisheye projection -->
+	<view hlookat="0" vlookat="0" fovtype="DFOV" fov="130" fovmin="75" fovmax="150" fisheye="0.35" />
+
+</krpano>
