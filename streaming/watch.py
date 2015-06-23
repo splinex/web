@@ -21,17 +21,17 @@ def tsToMp4(inputfile, dir_path, override=True):
     if(exists(out_path_mp4) and exists(out_path_mq) and exists(out_path_lq) and override == False):
         return
     callstr = "ffmpeg -loglevel quiet -y -i " + input_path  \
-              + " -c:v copy " + out_path_mp4       \
-              + " -c:v nvenc -preset:v hp -vf scale=iw/2:ih/2 " + out_path_mq    \
-              + " -c:v nvenc -preset:v hp -vf scale=iw/4:ih/4 " + out_path_lq
+              + " -c:v copy -copyts -copytb 0 " + out_path_mp4       \
+              + " -c:v nvenc -preset:v hp -vf scale=iw/2:ih/2 -copyts -copytb 0 " + out_path_mq    \
+              + " -c:v nvenc -preset:v hp -vf scale=iw/4:ih/4 -copyts -copytb 0 " + out_path_lq
     call(callstr, shell=True)
     
     if not exists(out_path_mq_mp4) or override == True:
-        callstr = "ffmpeg -loglevel quiet -y -i " + out_path_mq  + " -c:v copy " + out_path_mq_mp4  
+        callstr = "ffmpeg -loglevel quiet -y -i " + out_path_mq  + " -c:v copy -copyts -copytb 0 " + out_path_mq_mp4  
         call(callstr, shell=True)
     
     if not exists(out_path_lq_mp4) or override == True:
-        callstr = "ffmpeg -loglevel quiet -y -i " + out_path_lq  + " -c:v copy " + out_path_lq_mp4  
+        callstr = "ffmpeg -loglevel quiet -y -i " + out_path_lq  + " -c:v copy -copyts -copytb 0 " + out_path_lq_mp4  
         call(callstr, shell=True)
     
 def parsePlaylist( playlist ):  
@@ -62,6 +62,8 @@ def start_watch(playlist_filename):
     
     lq_dir_path = os.path.join(dir_path,"../lq")
     mq_dir_path = os.path.join(dir_path,"../mq")
+    call(["rm", "-rf", lq_dir_path])
+    call(["rm", "-rf", mq_dir_path])
     call(["mkdir",lq_dir_path])
     call(["mkdir",mq_dir_path])
 
@@ -93,9 +95,17 @@ def start_watch(playlist_filename):
             
       removed = [f for f in before if not f in after]
       for f in removed:
-        fpath = os.path.join(dir_path,os.path.splitext(f)[0]) + ".mp4"
+        fpath_mp4_hq = os.path.join(dir_path,os.path.splitext(f)[0]) + ".mp4"
+        fpath_ts_mq = os.path.join(mq_dir_path,os.path.splitext(f)[0]) + ".ts"
+        fpath_mp4_mq = os.path.join(mq_dir_path,os.path.splitext(f)[0]) + ".mp4"
+        fpath_ts_lq = os.path.join(lq_dir_path,os.path.splitext(f)[0]) + ".ts"
+        fpath_mp4_lq = os.path.join(lq_dir_path,os.path.splitext(f)[0]) + ".mp4"
         if os.path.isfile(fpath):
-            call(["rm", fpath])   
+            call(["rm", fpath_mp4_hq]) 
+            call(["rm", fpath_ts_mq]) 
+            call(["rm", fpath_mp4_mq])   
+            call(["rm", fpath_ts_lq])   
+            call(["rm", fpath_mp4_lq])   
             
       call(["cp" , playlist_filename, lq_dir_path])
       call(["cp" , playlist_filename, mq_dir_path])

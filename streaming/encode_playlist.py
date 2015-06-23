@@ -24,8 +24,8 @@ def tsToMp4(inputfile):
     out_path_lq = os.path.join(dir_path, os.path.join("../lq", file_name + ".ts"))
     callstr = "ffmpeg -y -i " + input_path  \
              + " -c:v copy " + out_path_mp4       \
-              + " -c:v nvenc -preset:v hp -vf scale=iw/2:ih/2 " + out_path_mq    \
-              + " -c:v nvenc -preset:v hp -vf scale=iw/4:ih/4 " + out_path_lq
+              + " -c:v nvenc -preset:v hp -vf scale=iw/2:ih/2 -copyts -copytb 0 " + out_path_mq    \
+              + " -c:v nvenc -preset:v hp -vf scale=iw/4:ih/4 -copyts -copytb 0 " + out_path_lq
     call(callstr, shell=True)
     
 def parsePlaylist( playlist ):  
@@ -37,6 +37,6 @@ def parsePlaylist( playlist ):
     f.close()
     
     
-parsePlaylist (playlist_filename)   
-call("cp playlist_filename mq/",shell=True)
-call("cp playlist_filename lq/",shell=True)
+# parsePlaylist (playlist_filename)   
+call("cp " + playlist_filename + " mq/",shell=True)
+call("cp " + playlist_filename + " lq/",shell=True)
