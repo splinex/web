@@ -21,17 +21,17 @@ def tsToMp4(inputfile, dir_path, override=True):
     if(exists(out_path_mp4) and exists(out_path_mq) and exists(out_path_lq) and override == False):
         return
     callstr = "ffmpeg -loglevel quiet -y -i " + input_path  \
-              + " -c:v copy -copyts -movflags faststart+ -copytb 0 " + out_path_mp4       \
+              + " -c:v copy " + out_path_mp4       \
               + " -c:v nvenc -preset:v hp -vf scale=iw/2:ih/2 -copyts -copytb 0 " + out_path_mq    \
               + " -c:v nvenc -preset:v hp -vf scale=iw/4:ih/4 -copyts -copytb 0 " + out_path_lq
     call(callstr, shell=True)
     
     if not exists(out_path_mq_mp4) or override == True:
-        callstr = "ffmpeg -loglevel quiet -y -i " + out_path_mq  + " -c:v copy -movflags faststart+ -copyts -copytb 0 " + out_path_mq_mp4  
+        callstr = "ffmpeg -loglevel quiet -y -i " + out_path_mq  + " -c:v copy " + out_path_mq_mp4  
         call(callstr, shell=True)
     
     if not exists(out_path_lq_mp4) or override == True:
-        callstr = "ffmpeg -loglevel quiet -y -i " + out_path_lq  + " -c:v copy -movflags faststart+ -copyts -copytb 0 " + out_path_lq_mp4  
+        callstr = "ffmpeg -loglevel quiet -y -i " + out_path_lq  + " -c:v copy " + out_path_lq_mp4  
         call(callstr, shell=True)
     
 def parsePlaylist( playlist ):  
