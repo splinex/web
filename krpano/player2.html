@@ -35,13 +35,13 @@
         // получает из плейлиста 2 последних чанка
         function getNextChunk(d) {
             $.ajax({
-                url: '/test/m3u8/lq/1.m3u8?t='+Math.random(),
+                url: 'live/1.m3u8?t='+Math.random(),
                 success: function(data) {
                     var reg = /([a-zA-Z0-9]+)\.ts/g
                     var a = data.match(reg);
                     var next = a[a.length-2];
                     next = next.replace('ts', 'mp4');
-                    s_next = '%SWFPATH%/m3u8/lq/'+next;
+                    s_next = '%SWFPATH%/live/'+next;
                     console.log(s_next)
                     // если первый запуск то krpano
                     if(d) {

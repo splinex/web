@@ -8,14 +8,14 @@
             url.flash="plugins/videoplayer.swf"
             url.html5="plugins/videoplayer.js"
             
-            posterurl.no-ios.and.no-desktop="%SWFPATH%/m3u8/lq/1.m3u8.jpg"
-            videourl.no-ios.and.no-desktop="%SWFPATH%/m3u8/lq/1.mp4"
+            posterurl.no-ios.and.no-desktop="%SWFPATH%/live/1.m3u8.jpg"
+            videourl.no-ios.and.no-desktop="%SWFPATH%/live/start.mp4"
             
-            posterurl.desktop="%SWFPATH%/m3u8/lq/1.m3u8.jpg"
-            videourl.desktop="%SWFPATH%/m3u8/lq/1.mp4"
+            posterurl.desktop="%SWFPATH%/live/1.m3u8.jpg"
+            videourl.desktop="%SWFPATH%/live/1.mp4"
             
-            posterurl.ios="%SWFPATH%/m3u8/lq/1.m3u8.jpg"
-            videourl.ios="%SWFPATH%/m3u8/mq/1.m3u8"
+            posterurl.ios="%SWFPATH%/live/1.m3u8.jpg"
+            videourl.ios="%SWFPATH%/live/1.m3u8"
             
             buffertime="0.1"
 	        pausedonstart="false"
@@ -27,7 +27,7 @@
 	        width.no-panovideosupport="100%"
 	        height.no-panovideosupport="prop"
 
-            onloaded="videointerface_setup_interface(get(name));"
+            onloaded="videointerface_setup_interface(get(name));loadnextvideo();"
             onvideocomplete="loadnextvideo();"
 	        onvideoready="videointerface_videoready();"
 	        />
