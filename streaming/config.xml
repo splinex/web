@@ -3,225 +3,378 @@
     <window fullscreen="false"/>
     <connect_order value="udp"/>
     <sources>
-        <source up="0 0 -1" name="Allie" orientation="wall" profile="White_BEam">
-            <url>file:///Volumes/StorEDGE/tmp/o.ts</url>
-<!--            <url>file:///Volumes/StorEDGE/videos/cap004.0.ts</url>-->
+        <source orientation="custom" up="-1 0 0" name="Allie" profile="__" stream="false">
+            <url>file://udp://127.0.0.1:1034</url>
         </source>
     </sources>
     <profiles>
-        <profile name="PlainCam">
+<profile dynamic_stitch="false" name="5691">
+            <up>-1 0 0</up>
+            <camera theta="0" type="pano" phi="0"/>
+            <semisphere>
+                <geometry cx="1026.72" radius="940.367" cy="1046.39" phi="0"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s1="1" g="0.75" s2="1" l="6.10352e-05" b="0.75" r="0.75"/>
+                <color_correction_polyfit coefficents_g="" offset_r="40" coefficents_b="" offset_g="40" poly_scale_r="0.2" offset_b="40" poly_scale_g="0.2" coefficents_r="" poly_scale_b="0.2"/>
+            </semisphere>
+            <semisphere>
+                <geometry cx="1041.49" radius="940.367" cy="992.534" phi="0"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s1="1" g="0.75" s2="1" l="6.10352e-05" b="0.75" r="0.75"/>
+                <color_correction_polyfit coefficents_g="" offset_r="40" coefficents_b="" offset_g="40" poly_scale_r="0.2" offset_b="40" poly_scale_g="0.2" coefficents_r="" poly_scale_b="0.2"/>
+            </semisphere>
+        </profile>
+        <profile dynamic_stitch="false" name="6240">
+            <up>-1 0 0</up>
+            <camera theta="0" type="pano" phi="0"/>
+            <semisphere>
+                <geometry cx="1016.48" radius="935.113" cy="1037.26" phi="0"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s1="1" g="0.75" s2="1" l="6.10352e-05" b="0.75" r="0.75"/>
+                <color_correction_polyfit coefficents_g="" offset_r="40" coefficents_b="" offset_g="40" poly_scale_r="0.2" offset_b="40" poly_scale_g="0.2" coefficents_r="" poly_scale_b="0.2"/>
+            </semisphere>
+            <semisphere>
+                <geometry cx="1018.39" radius="935.113" cy="1040.25" phi="-0.0172788"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s1="1" g="0.75" s2="1" l="6.10352e-05" b="0.75" r="0.75"/>
+                <color_correction_polyfit coefficents_g="" offset_r="40" coefficents_b="" offset_g="40" poly_scale_r="0.2" offset_b="40" poly_scale_g="0.2" coefficents_r="" poly_scale_b="0.2"/>
+            </semisphere>
+        </profile>
+
+        <profile dynamic_stitch="false" name="3516">
+
+
+        <up>-1 0 0</up>
+
+
+        <camera phi="0" theta="0" type="pano"/>
+
+
+        <semisphere>
+
+
+                <geometry cx="0.496328" cy="0.497584" phi="0" rad_x="0.473588" rad_y="0.48013" radius="935.113" units="relative"/>
+
+
+                <distorsion k1="-0.101633" k2="-0.195392" k3="-1.50269"/>
+
+
+                <color b="0.75" g="0.75" l="6.10352e-05" r="0.75" s1="1" s2="1"/>
+
+
+                <color_correction_polyfit coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_b="40" offset_g="40" offset_r="40" poly_scale_b="0.2" poly_scale_g="0.2" poly_scale_r="0.2"/>
+
+
+        </semisphere>
+
+
+        <semisphere>
+
+
+                <geometry cx="0.497261" cy="0.499044" phi="-0.0172788" rad_x="0.47354" rad_y="0.480226" radius="935.113" units="relative"/>
+
+
+                <distorsion k1="-0.104538" k2="-0.202599" k3="-1.50319"/>
+
+
+                <color b="0.75" g="0.75" l="6.10352e-05" r="0.75" s1="1" s2="1"/>
+
+
+                <color_correction_polyfit coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_b="40" offset_g="40" offset_r="40" poly_scale_b="0.2" poly_scale_g="0.2" poly_scale_r="0.2"/>
+
+
+        </semisphere>
+
+
+        </profile>
+        <profile dynamic_stitch="false" name="5307">
+
+
+               <up>-1 0 0</up>
+
+
+               <camera phi="0" theta="0" type="pano"/>
+
+
+               <semisphere>
+
+
+                       <geometry cx="0.505329" cy="0.493584" phi="0" rad_x="0.477898" rad_y="0.477898" radius="10000" units="relative"/>
+
+
+                       <distorsion k1="-0.1" k2="-0.2" k3="-1.2"/>
+
+
+                       <color b="1" g="1" l="1" r="1" s1="1" s2="1"/>
+
+
+                       <color_correction_polyfit coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_b="40" offset_g="40" offset_r="40" poly_scale_b="1" poly_scale_g="1" poly_scale_r="1"/>
+
+
+               </semisphere>
+
+
+               <semisphere>
+
+
+                       <geometry cx="0.499344" cy="0.50922" phi="-0.00942478" rad_x="0.477898" rad_y="0.477898" radius="10000" units="relative"/>
+
+
+                       <distorsion k1="-0.1" k2="-0.2" k3="-1.2"/>
+
+
+                       <color b="1" g="1" l="1" r="1" s1="1" s2="1"/>
+
+
+                       <color_correction_polyfit coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_b="40" offset_g="40" offset_r="40" poly_scale_b="1" poly_scale_g="1" poly_scale_r="1"/>
+
+
+               </semisphere>
+
+
+       </profile>
+
+        <profile dynamic_stitch="true" name="6232_BlackAllie" color="true">
+            <up>-1 0 0</up>
+            <camera theta="1.5708" type="pano" phi="4.71239"/>
+            <semisphere>
+                <geometry cx="1029.74" cy="1019.69" phi="0.00472197" rad_x="0.5" rad_y="0.5" units="absolute" radius="981.408"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s1="1" s2="1" g="1" l="1" r="1" b="1"/>
+                <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" poly_scale_g="0.2" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_g="40" poly_scale_r="0.2" poly_scale_b="0.2"/>
+            </semisphere>
+            <semisphere>
+                <geometry cx="1037.1" cy="974.404" phi="0" rad_x="0.5" rad_y="0.5" units="absolute" radius="978.334"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s1="1" s2="1" g="1" l="1" r="1" b="1"/>
+                <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" poly_scale_g="0.2" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_g="40" poly_scale_r="0.2" poly_scale_b="0.2"/>
+            </semisphere>
+        </profile>
+        <profile name="PlainCam" dynamic_stitch="false">
             <camera/>
         </profile>
-  <profile dynamic_stitch="false" name="RedBeam">
-	
-            
-	<up>0 0 -1</up>
-	
-            
-	<camera phi="0" theta="90" type="pano"/>
-	
-            
-	<semisphere>
-		
-                
-		<geometry cx="0.52005" cy="0.507264" phi="0.0100719" rad_x="0.476332" rad_y="0.476332" radius="10000" units="relative"/>
-		
-                
-		<distorsion k1="0" k2="0" k3="0"/>
-		
-                
-		<color b="1" g="1" l="1" r="0.85" s1="1" s2="1"/>
-		
-                
-		<color_correction_polyfit coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_b="40" offset_g="40" offset_r="40" poly_scale_b="0.2" poly_scale_g="0.2" poly_scale_r="0.2"/>
-		
-            
-	</semisphere>
-	
-            
-	<semisphere>
-		
-                
-		<geometry cx="0.496615" cy="0.517811" phi="-0.0172788" rad_x="0.478332" rad_y="0.477599" radius="10000" units="relative"/>
-		
-                
-		<distorsion k1="0.012" k2="0" k3="0"/>
-		
-                
-		<color b="1" g="1" l="1" r="0.85" s1="1" s2="1"/>
-		
-                
-		<color_correction_polyfit coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_b="40" offset_g="40" offset_r="40" poly_scale_b="0.2" poly_scale_g="0.2" poly_scale_r="0.2"/>
-		
-            
-	</semisphere>
-	
-        
-</profile>
- 
+        <profile name="5691" dynamic_stitch="false">
+            <up>-1 0 0</up>
+            <camera type="pano" phi="0" theta="0"/>
+            <semisphere>
+                <geometry cy="1046.39" rad_x="0.5" rad_y="0.5" units="absolute" phi="0" radius="940.367" cx="1026.72"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="6.10352e-05" r="0.75" b="0.75" g="0.75" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="0.2" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="0.2" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="0.2"/>
+            </semisphere>
+            <semisphere>
+                <geometry cy="992.534" rad_x="0.5" rad_y="0.5" units="absolute" phi="0" radius="940.367" cx="1041.49"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="6.10352e-05" r="0.75" b="0.75" g="0.75" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="0.2" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="0.2" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="0.2"/>
+            </semisphere>
+        </profile>
+        <profile name="6240" dynamic_stitch="false">
+            <up>-1 0 0</up>
+            <camera type="pano" phi="0" theta="0"/>
+            <semisphere>
+                <geometry cy="1037.26" rad_x="0.5" rad_y="0.5" units="absolute" phi="0" radius="935.113" cx="1016.48"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="6.10352e-05" r="0.75" b="0.75" g="0.75" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="0.2" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="0.2" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="0.2"/>
+            </semisphere>
+            <semisphere>
+                <geometry cy="1040.25" rad_x="0.5" rad_y="0.5" units="absolute" phi="-0.0172788" radius="935.113" cx="1018.39"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="6.10352e-05" r="0.75" b="0.75" g="0.75" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="0.2" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="0.2" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="0.2"/>
+            </semisphere>
+        </profile>
+        <profile color="true" name="Black_Allie" dynamic_stitch="false">
+            <up>-1 0 0</up>
+            <camera type="pano" phi="4.71239" theta="1.5708"/>
+            <semisphere>
+                <geometry cy="1019.69" rad_x="0.5" rad_y="0.5" units="absolute" phi="0.00472197" radius="981.408" cx="1029.74"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="0.2" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="0.2" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="0.2"/>
+            </semisphere>
+            <semisphere>
+                <geometry cy="974.404" rad_x="0.5" rad_y="0.5" units="absolute" phi="0" radius="978.334" cx="1037.1"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="0.2" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="0.2" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="0.2"/>
+            </semisphere>
+        </profile>
+        <profile name="RedBeam" dynamic_stitch="false">
+            <up>0 0 -1</up>
+            <camera type="pano" phi="0" theta="90"/>
+            <semisphere>
+                <geometry cy="0.507264" rad_x="0.476332" rad_y="0.476332" units="relative" phi="0.0100719" radius="10000" cx="0.52005"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="1" r="0.85" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="0.2" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="0.2" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="0.2"/>
+            </semisphere>
+            <semisphere>
+                <geometry cy="0.517811" rad_x="0.478332" rad_y="0.477599" units="relative" phi="-0.0172788" radius="10000" cx="0.496615"/>
+                <distorsion k1="0.012" k2="0" k3="0"/>
+                <color s2="1" l="1" r="0.85" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="0.2" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="0.2" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="0.2"/>
+            </semisphere>
+        </profile>
         <profile color="true" name="5725" dynamic_stitch="false">
             <up>-1 0 0</up>
             <camera type="pano" phi="180" theta="90"/>
             <semisphere>
-                <geometry phi="-3.17455" radius="973.252" cx="1041.51" cy="1009.64"/>
-                <distorsion k2="-0.2" k3="-1.50181" k1="-0.10185"/>
-                <color r="0.9" b="1" s1="-24.4048" s2="-25.0263" g="1" l="0.9711"/>
-                <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_g="40"/>
+                <geometry cy="1009.64" rad_x="0.5" rad_y="0.5" units="absolute" phi="-3.17455" radius="973.252" cx="1041.51"/>
+                <distorsion k1="-0.10185" k2="-0.2" k3="-1.50181"/>
+                <color s2="-25.0263" l="0.9711" r="0.9" b="1" g="1" s1="-24.4048"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
             </semisphere>
             <semisphere>
-                <geometry phi="-3.14314" radius="973.825" cx="1015.52" cy="1049.07"/>
-                <distorsion k2="-0.2" k3="-1.49861" k1="-0.097149"/>
-                <color r="0.9" b="1" s1="37.4632" s2="2.71375" g="1" l="1.02976"/>
-                <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_g="40"/>
+                <geometry cy="1049.07" rad_x="0.5" rad_y="0.5" units="absolute" phi="-3.14314" radius="973.825" cx="1015.52"/>
+                <distorsion k1="-0.097149" k2="-0.2" k3="-1.49861"/>
+                <color s2="2.71375" l="1.02976" r="0.9" b="1" g="1" s1="37.4632"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
             </semisphere>
         </profile>
-
-     <profile name="5674">
-           <up>-1 0 0</up>
-           <camera theta="90" phi="0" type="pano"/>
-           <semisphere>
-               <geometry radius="978.449" cx="1030.38" cy="1014.96" phi="0"/>
-               <distorsion k1="-0.1" k2="-0.2" k3="-1.9"/>
-               <color g="1" s1="1" s2="1" l="1" r="1" b="1"/>
-               <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_g="40" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_r="40" offset_b="40"/>
-           </semisphere>
-           <semisphere>
-               <geometry radius="978.184" cx="1038.33" cy="1016.11" phi="0.015708"/>
-               <distorsion k1="-0.1" k2="-0.2" k3="-1.9"/>
-               <color g="1" s1="1" s2="1" l="1" r="1" b="1"/>
-               <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_g="40" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_r="40" offset_b="40"/>
-           </semisphere>
-       </profile>
-       <profile name="5721">
-          <up>-1 0 0</up>
-           <camera phi="0" type="pano" theta="0"/>
-           <semisphere>
-               <geometry radius="978.064" phi="0" cx="1018.12" cy="1033.71"/>
-               <distorsion k2="-0.2" k3="-1" k1="-0.1"/>
-                <color g="1" s1="1" s2="1" l="1" r="1" b="1"/>
-               <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_g="40"/>
-           </semisphere>
-           <semisphere>
-               <geometry radius="976.016" phi="0" cx="1031.79" cy="1016.21"/>
-               <distorsion k2="-0.2" k3="-1" k1="-0.099514"/>
-               <color g="1" s1="1" s2="1" l="1" r="1" b="1"/>
-               <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_g="40"/>
-           </semisphere>
-       </profile>
-       <profile name="6215">
-          <up>-1 0 0</up>
-           <camera phi="0" type="pano" theta="0"/>
-           <semisphere>
-               <geometry radius="981.624" phi="-0.0015708" cx="1022.48" cy="1040.65"/>
-               <distorsion k2="-0.2" k3="-1" k1="-0.1"/>
-               <color g="1" s1="1" s2="1" l="1" r="1" b="1"/>
-               <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_g="40"/>
-           </semisphere>
-           <semisphere>
-               <geometry radius="981.624" phi="0.0361283" cx="1029.34" cy="1059.03"/>
-               <distorsion k2="-0.2" k3="-1" k1="-0.10049"/>
-               <color g="1" s1="1" s2="1" l="1" r="1" b="1"/>
-               <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_g="40"/>
-           </semisphere>
-       </profile>
-        <profile name="5727">
+        <profile name="5674" dynamic_stitch="false">
             <up>-1 0 0</up>
             <camera type="pano" phi="0" theta="90"/>
             <semisphere>
-                <geometry cx="1034.48" cy="1023.15" radius="974.353" phi="-0.0015708"/>
-                <distorsion k1="-0.6" k2="-0.2" k3="-1.9"/>
-                <color l="1" s1="1" s2="1" r="1" b="1" g="1"/>
-                <color_correction_polyfit offset_g="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211"/>
+                <geometry cy="1014.96" rad_x="0.5" rad_y="0.5" units="absolute" phi="0" radius="978.449" cx="1030.38"/>
+                <distorsion k1="-0.1" k2="-0.2" k3="-1.9"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
             </semisphere>
             <semisphere>
-                <geometry cx="1021.94" cy="1014.06" radius="974.622" phi="-0.0141372"/>
-                <distorsion k1="-0.6" k2="-0.2" k3="-1.9"/>
-                <color l="1" s1="1" s2="1" r="1" b="1" g="1"/>
-                <color_correction_polyfit offset_g="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211"/>
+                <geometry cy="1016.11" rad_x="0.5" rad_y="0.5" units="absolute" phi="0.015708" radius="978.184" cx="1038.33"/>
+                <distorsion k1="-0.1" k2="-0.2" k3="-1.9"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
             </semisphere>
         </profile>
-        <profile name="6205">
+        <profile name="5721" dynamic_stitch="false">
+            <up>-1 0 0</up>
+            <camera type="pano" phi="0" theta="0"/>
+            <semisphere>
+                <geometry cy="1033.71" rad_x="0.5" rad_y="0.5" units="absolute" phi="0" radius="978.064" cx="1018.12"/>
+                <distorsion k1="-0.1" k2="-0.2" k3="-1"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
+            <semisphere>
+                <geometry cy="1016.21" rad_x="0.5" rad_y="0.5" units="absolute" phi="0" radius="976.016" cx="1031.79"/>
+                <distorsion k1="-0.099514" k2="-0.2" k3="-1"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
+        </profile>
+        <profile name="6215" dynamic_stitch="false">
+            <up>-1 0 0</up>
+            <camera type="pano" phi="0" theta="0"/>
+            <semisphere>
+                <geometry cy="1040.65" rad_x="0.5" rad_y="0.5" units="absolute" phi="-0.0015708" radius="981.624" cx="1022.48"/>
+                <distorsion k1="-0.1" k2="-0.2" k3="-1"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
+            <semisphere>
+                <geometry cy="1059.03" rad_x="0.5" rad_y="0.5" units="absolute" phi="0.0361283" radius="981.624" cx="1029.34"/>
+                <distorsion k1="-0.10049" k2="-0.2" k3="-1"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
+        </profile>
+        <profile name="5727" dynamic_stitch="false">
+            <up>-1 0 0</up>
+            <camera type="pano" phi="0" theta="90"/>
+            <semisphere>
+                <geometry cy="1023.15" rad_x="0.5" rad_y="0.5" units="absolute" phi="-0.0015708" radius="974.353" cx="1034.48"/>
+                <distorsion k1="-0.6" k2="-0.2" k3="-1.9"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
+            <semisphere>
+                <geometry cy="1014.06" rad_x="0.5" rad_y="0.5" units="absolute" phi="-0.0141372" radius="974.622" cx="1021.94"/>
+                <distorsion k1="-0.6" k2="-0.2" k3="-1.9"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
+        </profile>
+        <profile name="6205" dynamic_stitch="false">
             <up>-1 0 0</up>
             <camera type="pano" phi="4.71239" theta="1.5708"/>
             <semisphere>
-                <geometry cx="1063.15" cy="1012.91" radius="974.353" phi="-0.0015708"/>
+                <geometry cy="1012.91" rad_x="0.5" rad_y="0.5" units="absolute" phi="-0.0015708" radius="974.353" cx="1063.15"/>
                 <distorsion k1="-0.6" k2="-0.2" k3="-1.9"/>
-                <color l="1" s1="1" s2="1" r="1" b="1" g="1"/>
-                <color_correction_polyfit offset_g="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
             </semisphere>
             <semisphere>
-                <geometry cx="1009.65" cy="1026.35" radius="974.622" phi="0.0345575"/>
+                <geometry cy="1026.35" rad_x="0.5" rad_y="0.5" units="absolute" phi="0.0345575" radius="974.622" cx="1009.65"/>
                 <distorsion k1="-0.6" k2="-0.2" k3="-1.9"/>
-                <color l="1" s1="1" s2="1" r="1" b="1" g="1"/>
-                <color_correction_polyfit offset_g="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="40" offset_b="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
             </semisphere>
         </profile>
-
-
-     <profile name="1024">
-           <up>-1 0 0</up>
-           <camera theta="90" phi="0" type="pano"/>
-           <semisphere>
-               <geometry radius="512" cx="512" cy="512" phi="0"/>
-               <distorsion k1="-0.1" k2="-0.2" k3="-1.9"/>
-               <color g="1" s1="1" s2="1" l="1" r="1" b="1"/>
-               <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_g="40" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_r="40" offset_b="40"/>
-           </semisphere>
-           <semisphere>
-               <geometry radius="512" cx="512" cy="512" phi="0.015708"/>
-               <distorsion k1="-0.1" k2="-0.2" k3="-1.9"/>
-               <color g="1" s1="1" s2="1" l="1" r="1" b="1"/>
-               <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_g="40" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_r="40" offset_b="40"/>
-           </semisphere>
-       </profile>
-
+        <profile name="1024" dynamic_stitch="false">
+            <up>-1 0 0</up>
+            <camera type="pano" phi="0" theta="90"/>
+            <semisphere>
+                <geometry cy="512" rad_x="0.5" rad_y="0.5" units="absolute" phi="0" radius="512" cx="512"/>
+                <distorsion k1="-0.1" k2="-0.2" k3="-1.9"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
+            <semisphere>
+                <geometry cy="512" rad_x="0.5" rad_y="0.5" units="absolute" phi="0.015708" radius="512" cx="512"/>
+                <distorsion k1="-0.1" k2="-0.2" k3="-1.9"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
+        </profile>
         <profile name="Ferrari_vs_Porsche" dynamic_stitch="false">
-                  <up>-1 0 0</up>
-                  <camera theta="90" type="pano" phi="0"/>
-                  <semisphere>
-                      <geometry cx="1034.64" radius="978.818" cy="1044.2" phi="1.58186"/>
-                      <distorsion k1="0" k3="0" k2="0"/>
-                      <color g="1" s1="1" l="1" b="1" s2="1" r="1"/>
-                      <color_correction_polyfit coefficents_r="" offset_b="40" coefficents_b="" offset_g="40" coefficents_g="" offset_r="40"/>
-                  </semisphere>
-                  <semisphere>
-                      <geometry cx="1055.42" radius="978.818" cy="1063.39" phi="-1.57"/>
-                      <distorsion k1="0" k3="0" k2="0"/>
-                      <color g="1" s1="1" l="1" b="1" s2="1" r="1"/>
-                      <color_correction_polyfit coefficents_r="" offset_b="40" coefficents_b="" offset_g="40" coefficents_g="" offset_r="40"/>
-                  </semisphere>
+            <up>-1 0 0</up>
+            <camera type="pano" phi="0" theta="90"/>
+            <semisphere>
+                <geometry cy="1044.2" rad_x="0.5" rad_y="0.5" units="absolute" phi="1.58186" radius="978.818" cx="1034.64"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
+            <semisphere>
+                <geometry cy="1063.39" rad_x="0.5" rad_y="0.5" units="absolute" phi="-1.57" radius="978.818" cx="1055.42"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
         </profile>
         <profile name="MissUSA122-Run" dynamic_stitch="false">
-                  <up>0 -1 0</up>
-                  <camera theta="0" type="pano" phi="0"/>
-                  <semisphere>
-                      <geometry radius="976.592" cx="1028.05" cy="1009.84" phi="-0.0109956"/>
-                      <distorsion k1="-0.13054" k2="-0.222258" k3="-1.5209"/>
-                      <color l="1" r="-1" s1="-1" b="-1" s2="-1" g="-1"/>
-                      <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_b="40" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_r="40"/>
-                  </semisphere>
-                  <semisphere>
-                      <geometry radius="976.15" cx="995.826" cy="1045.9" phi="-0.0015708"/>
-                      <distorsion k1="-0.213085" k2="-0.222258" k3="-1.51958"/>
-                      <color l="1" r="-1" s1="-1" b="-1" s2="-1" g="-1"/>
-                      <color_correction_polyfit coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" offset_b="40" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" offset_r="40"/>
-                  </semisphere>
-              </profile>
-
-        <profile dynamic_stitch="false" name="White_BEam">
-            <up>-1 0 0</up>
-            <camera phi="0" theta="90" type="pano"/>
+            <up>0 -1 0</up>
+            <camera type="pano" phi="0" theta="0"/>
             <semisphere>
-                <geometry radius="975.527" phi="-0.0141372" cx="1008.42" cy="1042.61"/>
-                <distorsion k3="0" k1="0" k2="0"/>
-                <color l="1" s1="1" r="1" s2="1" b="1" g="1"/>
-                <color_correction_polyfit poly_scale_g="0.2" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="0" offset_b="0" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_r="0.2" poly_scale_b="0.2" offset_g="0"/>
+                <geometry cy="1009.84" rad_x="0.5" rad_y="0.5" units="absolute" phi="-0.0109956" radius="976.592" cx="1028.05"/>
+                <distorsion k1="-0.13054" k2="-0.222258" k3="-1.5209"/>
+                <color s2="-1" l="1" r="-1" b="-1" g="-1" s1="-1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
             </semisphere>
             <semisphere>
-                <geometry radius="979.623" phi="0" cx="1030.01" cy="1053.24"/>
-                <distorsion k3="0" k1="0" k2="0"/>
-                <color l="1" s1="1" r="1" s2="1" b="1" g="1"/>
-                <color_correction_polyfit poly_scale_g="0.2" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" offset_r="0" offset_b="0" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_r="0.2" poly_scale_b="0.2" offset_g="0"/>
+                <geometry cy="1045.9" rad_x="0.5" rad_y="0.5" units="absolute" phi="-0.0015708" radius="976.15" cx="995.826"/>
+                <distorsion k1="-0.213085" k2="-0.222258" k3="-1.51958"/>
+                <color s2="-1" l="1" r="-1" b="-1" g="-1" s1="-1"/>
+                <color_correction_polyfit offset_r="40" offset_b="40" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="1" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="1" offset_g="40" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="1"/>
+            </semisphere>
+        </profile>
+        <profile name="White_BEam" dynamic_stitch="false">
+            <up>-1 0 0</up>
+            <camera type="pano" phi="0" theta="90"/>
+            <semisphere>
+                <geometry cy="1042.61" rad_x="0.5" rad_y="0.5" units="absolute" phi="-0.0141372" radius="975.527" cx="1008.42"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="0" offset_b="0" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="0.2" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="0.2" offset_g="0" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="0.2"/>
+            </semisphere>
+            <semisphere>
+                <geometry cy="1053.24" rad_x="0.5" rad_y="0.5" units="absolute" phi="0" radius="979.623" cx="1030.01"/>
+                <distorsion k1="0" k2="0" k3="0"/>
+                <color s2="1" l="1" r="1" b="1" g="1" s1="1"/>
+                <color_correction_polyfit offset_r="0" offset_b="0" coefficents_r="-1.60699e-12 1.56841e-09 -5.46529e-07 7.8967e-05 -0.00439863 1.04684" poly_scale_r="0.2" coefficents_b="-5.99059e-13 5.63999e-10 -1.91335e-07 2.62835e-05 -0.00149373 1.01829" poly_scale_b="0.2" offset_g="0" coefficents_g="-1.39003e-12 1.34135e-09 -4.60285e-07 6.56757e-05 -0.00416574 1.04211" poly_scale_g="0.2"/>
             </semisphere>
         </profile>
     </profiles>
